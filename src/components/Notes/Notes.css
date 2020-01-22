@@ -1,0 +1,14 @@
+.notes .notes-collection {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.no-notes {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

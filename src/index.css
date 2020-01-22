@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #383F51;
+    font-family: Lato, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ellipsise {
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+@media screen and (max-width: 900px) {
+    .modal {
+        width: 100% !important;
+    }
+
+    .notes .notes-collection {
+        justify-content: center;
+    }
+}
