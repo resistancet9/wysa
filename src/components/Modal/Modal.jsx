@@ -4,8 +4,8 @@ import './Modal.css'
 class Modal extends Component {
   render() {
     return (
-      <div className={`modal-backdrop ${this.props.showModal ? 'show': 'hide'}`}>
-        <div className="modal">
+      <div>
+        <div className={`view-modal modal ${this.props.showModal ? 'animate' : ''}`}>
           <div className="title">
             <div>
               {this.props.note.title}

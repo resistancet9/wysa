@@ -22,7 +22,25 @@
   border: 1px solid white;
   padding: 10px 25px;
   color: white;
+  cursor: pointer;
   float: right;
+  transition: .3s;
+}
+
+.toolbar button:hover {
+  background: #f7f7f7;
+  color: #444;
+}
+
+.toolbar .filter-add {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.toolbar .filter-add > * {
+  margin: 3px;
 }
 
 .toolbar .filter-add select{
@@ -30,7 +48,7 @@
   border: 1px solid white;
   padding: 9px 25px;
   color: #fff;
-  margin:0 10px;
+  border-radius: 0px;
 }
 
 .toolbar .filter-add select option {

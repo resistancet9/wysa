@@ -24,7 +24,7 @@ class Notes extends Component {
     })
   }
 
-  handleShowAddModal() {
+  handleShowAddModal(set) {
     this.setState(prevState => {
       return {
         showAddModal: !prevState.showAddModal,

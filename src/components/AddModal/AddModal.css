@@ -1,19 +1,18 @@
-.modal-backdrop {
-  background: #0005;
+.modal-backdrop.add {
+  /* background: #0005;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 999;
   left: 0;
-  top: 0;
-  display: none;
+  top: 0; */
 }
 
-.modal {
+.modal.add {
   width: 500px;
   height: 500px;
   position: fixed;
-  top: 50%;
+  top: -50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
@@ -21,9 +20,34 @@
   z-index: 10000;
   box-shadow: 0 0 2px #0001;
   overflow: hidden scroll;
+  transition: .3s;
 }
 
-.modal .title {
+.modal.add.animate {
+  top: 50%;
+}
+
+@keyframes animate {
+  0% {
+    top: -50%
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes animate-out {
+  0% {
+    top: 50%
+  }
+
+  100% {
+    top: -50%;
+  }
+}
+
+.modal.add .title {
   padding: 15px;
   box-shadow: 0 10px 20px #0001;
   font-weight: bold;
@@ -33,19 +57,19 @@
   letter-spacing: 1px;
 }
 
-.modal .trash-edit i {
+.modal.add .trash-edit i {
   font-size: 20px;
   cursor: pointer;
   color: red;
 }
 
-.modal .content {
+.modal.add .content {
   padding: 15px;
   letter-spacing: 1px;
   line-height: 25px;
 }
 
-.modal .content form input, .modal .content form textarea {
+.modal.add .content form input, .modal.add .content form textarea {
   background: none;
   border: none;
   border: 1px solid #4443;
@@ -54,13 +78,20 @@
   margin-bottom: 10px;
 }
 
-.modal .content .checkboxes {
+.modal.add .content .checkboxes {
   display: flex;
   justify-content: space-around;
 }
+
 .modal button {
   margin-top: 30px;
-  border: 1px solid white;
+  border: 1px solid #444;
   padding: 10px 25px;
   color: #444;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.modal button:hover {
+  background: #f7f7f7;
 }

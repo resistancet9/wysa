@@ -33,6 +33,12 @@ class Modal extends Component {
       content: this.state.content,
       labels: this.state.labels
     })
+
+    this.setState({
+      title: '',
+      content: '',
+      labels: []
+    })
   }
 
   render() {
@@ -47,15 +53,12 @@ class Modal extends Component {
     } else if(!editMode && this.state.stop) {
       this.setState({
         stop: false,
-        title: '',
-        content: '',
-        label: []
       })
     }
 
     return (
-      <div className={`modal-backdrop ${this.props.showAddModal ? 'show' : 'hide'}`}>
-        <div className="modal">
+      <div className={`add modal-backdrop`}>
+        <div className={`add modal ${this.props.showAddModal ? 'animate' : 'animate-out'}`}>
           <div className="title">
             <div>
               {editMode ? `Editing: ${note.title}`: `Add new note`}

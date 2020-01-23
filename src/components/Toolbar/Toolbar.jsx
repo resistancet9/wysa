@@ -13,16 +13,16 @@ class Toolbar extends Component {
         <div className="content">
           <h4>Notes</h4>
           <div className="filter-add">
-            Filter
+          <div className="filter-txt">Filter</div>
           <select name="filter" id="filter" onChange={this.handleFilter.bind(this)}>
-            <option value="">Select One...</option>
-            <option value="React">React</option>
-            <option value="Nodejs">Nodejs</option>
-            <option value="Naveen">Naveen</option>
-            <option value="AWS">AWS</option>
-            <option value="Wysa">Wysa</option>
-          </select>
-          <button onClick={this.props.handleShowAddModal}>Add</button>
+              <option value="">Select One...</option>
+              <option value="React">React</option>
+              <option value="Nodejs">Nodejs</option>
+              <option value="Naveen">Naveen</option>
+              <option value="AWS">AWS</option>
+              <option value="Wysa">Wysa</option>
+            </select>
+            <button onClick={this.props.handleShowAddModal}>Add</button>
           </div>
         </div>
       </div>

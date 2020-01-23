@@ -22,12 +22,34 @@ body {
     display: none !important;
 }
 
-@media screen and (max-width: 900px) {
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
     .modal {
         width: 100% !important;
     }
 
-    .notes .notes-collection {
-        justify-content: center;
+    .note {
+        min-width: 320px;
+        max-width: 320px;
     }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .toolbar .filter-txt {
+        display: none;
+    }
+
+    .note {
+        min-height: 250px !important;
+        max-height: 250px !important;
+        min-width: 96vw !important;
+        max-width: 96vw !important;
+    }
+
+    .notes .notes-collection {
+        flex-flow: column wrap;
+      }
+
+    
 }

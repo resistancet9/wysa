@@ -1,28 +1,22 @@
-.modal-backdrop {
-  background: #0005;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  display: none;
-}
-
-.modal {
+.view-modal.modal {
   width: 500px;
   height: 500px;
   position: fixed;
-  top: 50%;
+  top: -50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
   border-radius: 5px;
   z-index: 10000;
   box-shadow: 0 0 2px #0001;
+  transition: .3s;
 }
 
-.modal .title {
+.modal.view-modal.animate {
+  top: 50%;
+}
+
+.view-modal.modal .title {
   padding: 15px;
   box-shadow: 0 10px 20px #0001;
   font-weight: bold;
@@ -32,13 +26,13 @@
   letter-spacing: 1px;
 }
 
-.modal .trash-edit i {
+.view-modal.modal .trash-edit i {
   font-size: 20px;
   cursor: pointer;
   color: red;
 }
 
-.modal .content {
+.view-modal.modal .content {
   padding: 15px;
   letter-spacing: 1px;
   line-height: 25px;
