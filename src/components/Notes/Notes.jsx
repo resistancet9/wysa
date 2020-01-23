@@ -94,13 +94,22 @@ class Notes extends Component {
     })
   }
 
+  handleFilter(filter) {
+    let notes = localStorage.getItem('notes');
+    let parsedNotes = notes ? JSON.parse(notes) : [];
+    notes = filter == "" ? parsedNotes: parsedNotes.filter(n => n.labels.indexOf(filter) > -1 )
+    this.setState({
+      notes
+    })
+  }
+
   render() {
 
     let notes = this.state.notes;
 
     return (
       <div className="notes">
-        <Toolbar handleShowAddModal={this.handleShowAddModal.bind(this)} />
+        <Toolbar handleFilter={ this.handleFilter.bind(this)} handleShowAddModal={this.handleShowAddModal.bind(this)} />
         <Modal note={this.state.note} showModal={this.state.showModal} handleShowModal={this.handleShowModal.bind(this)}/>
         <AddModal note={this.state.note} editMode={this.state.editMode} handleAdd={this.handleAdd.bind(this)} showAddModal={this.state.showAddModal} handleShowAddModal={this.handleShowAddModal.bind(this)}/>
         <div className="notes-collection">

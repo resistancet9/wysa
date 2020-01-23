@@ -24,3 +24,17 @@
   color: white;
   float: right;
 }
+
+.toolbar .filter-add select{
+  background: none;
+  border: 1px solid white;
+  padding: 9px 25px;
+  color: #fff;
+  margin:0 10px;
+}
+
+.toolbar .filter-add select option {
+  padding: 9px 10px !important;
+    color: #444;
+    display: inline-block;
+}
