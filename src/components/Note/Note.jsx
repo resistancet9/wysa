@@ -10,7 +10,7 @@ class Note extends Component {
       <div className="note-container">
         <div className="note">
           <div className="title">
-            <div className="ellipsise" onClick={e => this.props.handleShowNote(index)}>
+            <div className="ellipsise title-text" onClick={e => this.props.handleShowNote(index)}>
               {title}
             </div>
             <div className="trash-edit" >

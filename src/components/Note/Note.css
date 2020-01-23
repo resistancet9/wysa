@@ -25,6 +25,16 @@
   align-items: center;
 }
 
+.note .title .title-text {
+  color: #201E50;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.note .title .title-text:hover {
+  color: #2A9D8F;
+}
+
 .note .content {
   padding: 15px 6px;
   font-size: 1em;
